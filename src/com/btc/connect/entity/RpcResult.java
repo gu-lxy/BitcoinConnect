@@ -1,4 +1,4 @@
-package com.btc.connect;
+package com.btc.connect.entity;
 
 public class RpcResult {
     private String id;

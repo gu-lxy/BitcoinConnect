@@ -1,7 +1,6 @@
-package com.btc.connect;
+package com.btc.connect.demo;
 
 import com.alibaba.fastjson.JSONObject;
-import java.rmi.StubNotFoundException;
 
 public class JSONDemo {
     public static void main(String[] args) {
