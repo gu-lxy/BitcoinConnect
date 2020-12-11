@@ -35,14 +35,14 @@ public class Test {
         System.out.println("特定高度的区块hash值:" + hash0);
 
         //测试：根据区块的hash值获取特定区块的信息
-        BlockData data = service.getBlockByHash(hash0);
-        System.out.println("结果:" + data.getHash());
+//        BlockData data = service.getBlockByHash(hash0);
+//        System.out.println("结果:" + data.getHash());
 
         //测试：生成一个新的比特币的地址
-        String address = service.getNewAddress("gjh", "ergou");
+        String address = service.getNewAddress("gjh", ADDRES_TYPE.LEGACY);
         System.out.println(address);
-
 
 
     }
 }
+

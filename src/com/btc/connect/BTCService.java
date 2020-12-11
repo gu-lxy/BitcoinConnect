@@ -20,8 +20,14 @@ public class BTCService {
     }
 
     //新需求：生成比特币的地址
-    public String getNewAddress(String label, String address_type) {
-        String json = BcRPCUtils.prepareJSON("getnewaddress", label, address_type);
+
+    /**
+     * 生成一个新的比特币对的地址
+     *
+     */
+    public String getNewAddress(String label,ADDRES_TYPE address_type) {
+        String type = Constants.getAddressType(address_type);
+        String json = BcRPCUtils.prepareJSON(Constants.GETNEWADDRESS, label, address_type);
         Result result = BcRPCUtils.sendPost(map, json);
         if (result == null) {
             return null;
@@ -39,7 +45,7 @@ public class BTCService {
      * @return 区块的信息，查询失败返回null
      */
     public BlockData getBlockByHash(String hash) {
-        String json = BcRPCUtils.prepareJSON("getblock", hash);
+        String json = BcRPCUtils.prepareJSON(Constants.GETBLOCK, hash);
         Result result = BcRPCUtils.sendPost(map, json);
         if (result == null) {
             return null;
@@ -57,7 +63,7 @@ public class BTCService {
      * @return 区块的hash值，请求失败返回null
      */
     public String getBlockHashByHeight(int height) {
-        String json = BcRPCUtils.prepareJSON("getblockhash", height);
+        String json = BcRPCUtils.prepareJSON(Constants.GETBLOCKHASH, height);
         System.out.println(json);
         Result result = BcRPCUtils.sendPost(map, json);
         if (result == null) {
@@ -77,7 +83,7 @@ public class BTCService {
      * @return 返回查询节点的区块链的信息，查询失败返回null
      */
     public BlockChainInfo getBlockChainInfo() {
-        String json = BcRPCUtils.prepareJSON("getblockchaininfo");
+        String json = BcRPCUtils.prepareJSON(Constants.GETBLOCKCHAININFO);
         Result result = BcRPCUtils.sendPost(map, json);
         if (result == null) {
             return null;
@@ -96,7 +102,7 @@ public class BTCService {
      * @return 返回最新区块的hash，查询失败返回null
      */
     public String getBestBlockHash() {
-        String json = BcRPCUtils.prepareJSON("getbestblockhash");
+        String json = BcRPCUtils.prepareJSON(Constants.GETBESTBLOCKHASH);
         Result result = BcRPCUtils.sendPost(map, json);
         if (result == null) {
             return null;
@@ -115,7 +121,7 @@ public class BTCService {
     public int getBlockCount() {
         //1.json
         //2.post请求
-        String json = BcRPCUtils.prepareJSON("getblockcount");
+        String json = BcRPCUtils.prepareJSON(Constants.GETBLOCKCOUNT);
         Result result = BcRPCUtils.sendPost(map, json);
         if (result == null) {
             return -1;
@@ -127,17 +133,17 @@ public class BTCService {
             return -1;//-1代表查询失败
         }
     }
-//
-//    //命令ping
-//    public String ping(String ping) {
-//        String json = BcRPCUtils.prepareJSON("ping", ping);
-//        Result result = BcRPCUtils.sendPost(map, json);
-//        if (result == null){
-//            return null;
-//        }
-//        if (result.getCode() == HttpStatus.SC_OK) {
-//            return ping;
-//        }
-//        return null;
-//    }
+
+    //命令ping
+    public String ping(String ping) {
+        String json = BcRPCUtils.prepareJSON("ping", ping);
+        Result result = BcRPCUtils.sendPost(map, json);
+        if (result == null){
+            return null;
+        }
+        if (result.getCode() == HttpStatus.SC_OK) {
+            return ping;
+        }
+        return null;
+    }
 }
