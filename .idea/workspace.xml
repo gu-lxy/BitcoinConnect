@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f366323-3040-46e7-9c89-ceb23bd1867e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/btc/connect/ADDRES_TYPE.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/btc/connect/entity/Balance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/btc/connect/entity/Mine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BitcoinConnect04/com/btc/connect/BTCService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BitcoinConnect04/com/btc/connect/BTCService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BitcoinConnect04/com/btc/connect/BcRPCUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BitcoinConnect04/com/btc/connect/BcRPCUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BitcoinConnect04/com/btc/connect/Constants$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BitcoinConnect04/com/btc/connect/Constants$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BitcoinConnect04/com/btc/connect/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BitcoinConnect04/com/btc/connect/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BitcoinConnect04/com/btc/connect/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BitcoinConnect04/com/btc/connect/Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/btc/connect/BTCService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/btc/connect/BTCService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/btc/connect/BcRPCUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/btc/connect/BcRPCUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/btc/connect/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/btc/connect/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/btc/connect/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/btc/connect/Test.java" afterDir="false" />
     </list>
@@ -16,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -147,6 +154,8 @@
       <workItem from="1607604628279" duration="54000" />
       <workItem from="1607654081897" duration="97000" />
       <workItem from="1607666741774" duration="4263000" />
+      <workItem from="1607856953773" duration="11014000" />
+      <workItem from="1607868336026" duration="143000" />
     </task>
     <servers />
   </component>
@@ -154,37 +163,38 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="453" y="107" key="#com.intellij.ide.util.MemberChooser" timestamp="1607582830780">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state x="544" y="89" key="#com.intellij.ide.util.MemberChooser" timestamp="1607863843988">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="544" y="89" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1607863843988" />
     <state x="453" y="107" key="#com.intellij.ide.util.MemberChooser/0.23.1280.777@0.23.1280.777" timestamp="1607582830780" />
     <state x="957" y="312" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1607597550621">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="957" y="312" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1607597550621" />
-    <state width="1493" height="266" key="GridCell.Tab.0.bottom" timestamp="1607673165242">
+    <state width="1493" height="240" key="GridCell.Tab.0.bottom" timestamp="1607868302693">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="266" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607673165242" />
+    <state width="1493" height="240" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607868302693" />
     <state width="1238" height="59" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1607585890143" />
-    <state width="1493" height="266" key="GridCell.Tab.0.center" timestamp="1607673165242">
+    <state width="1493" height="240" key="GridCell.Tab.0.center" timestamp="1607868302693">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="266" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607673165242" />
+    <state width="1493" height="240" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607868302693" />
     <state width="1238" height="59" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1607585890143" />
-    <state width="1493" height="266" key="GridCell.Tab.0.left" timestamp="1607673165242">
+    <state width="1493" height="240" key="GridCell.Tab.0.left" timestamp="1607868302693">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="266" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607673165242" />
+    <state width="1493" height="240" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607868302693" />
     <state width="1238" height="59" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1607585890143" />
-    <state width="1493" height="266" key="GridCell.Tab.0.right" timestamp="1607673165242">
+    <state width="1493" height="240" key="GridCell.Tab.0.right" timestamp="1607868302693">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="266" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607673165242" />
+    <state width="1493" height="240" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607868302693" />
     <state width="1238" height="59" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1607585890143" />
-    <state x="760" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607667029007">
+    <state x="760" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607862401225">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="760" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607667029007" />
+    <state x="760" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607862401225" />
   </component>
 </project>

@@ -1,5 +1,7 @@
 package com.btc.connect;
 
+import com.btc.connect.entity.Balance;
+
 /**
  * 常量
  */
@@ -19,12 +21,28 @@ public class Constants {
     public static final String GETBESTBLOCKHASH = "getbestblockhash";
     //获取区块信息
     public static final String GETBLOCKCHAININFO = "getblockchaininfo";
-    //
+    //获取新的区块的高度
     public static final String GETBLOCKHASH = "getblockhash";
-    //
+    //获取新的区块
     public static final String GETBLOCK = "getblock";
-    //
+    //获取新地址
     public static final String GETNEWADDRESS = "getnewaddress";
+    //平，声音
+    public static final String PING = "ping";
+    //获取余额
+    public static final String GETBALANCES = "getbalances";
+    //获取链接提示
+    public static final String GETCHAINTIPS = "getchaintips";
+    //连接总数
+    public static final String GETCOUNNECTIONCOUNT ="getconnectioncount";
+    //添加的节点信息
+    public static final String GETADDEDNODEINFO = "getaddednodeinfo";
+    //内存池信息
+    public static final String GETMEMPOOLINFO = "getmempoolinfo";
+    //区块过滤
+    public static final String GETBLOCKFILTER = "getblockfilter";
+    //通过txoutset信息得到的高度
+    public static final String GETTXOUTSETINFO="gettxoutsetinfo";
     /**
      * 该方法用于根据枚举类型返回对应的比特币的类型对应的字符串
      *
@@ -43,4 +61,5 @@ public class Constants {
                 return null;
         }
     }
+
 }

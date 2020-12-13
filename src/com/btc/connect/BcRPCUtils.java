@@ -2,6 +2,7 @@ package com.btc.connect;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.btc.connect.entity.Balance;
 import com.btc.connect.entity.Result;
 import com.btc.connect.entity.RpcResult;
 import org.apache.http.HttpResponse;
@@ -97,5 +98,9 @@ public class BcRPCUtils {
 
     public static String base64Encode(String msg) {
         return Base64.getEncoder().encodeToString(msg.getBytes(StandardCharsets.UTF_8));
+    }
+
+    public static Object JSBalance (){
+        return  Balance.class;
     }
 }

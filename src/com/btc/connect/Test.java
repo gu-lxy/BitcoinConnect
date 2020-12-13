@@ -1,11 +1,14 @@
 package com.btc.connect;
 
 
+import com.alibaba.fastjson.JSONObject;
+import com.btc.connect.entity.Balance;
 import com.btc.connect.entity.Bip;
 import com.btc.connect.entity.BlockChainInfo;
-import com.btc.connect.entity.BlockData;
+import com.btc.connect.entity.Mine;
 
 import java.util.List;
+import java.util.Set;
 
 public class Test {
 
@@ -41,8 +44,30 @@ public class Test {
         //测试：生成一个新的比特币的地址
         String address = service.getNewAddress("gjh", ADDRES_TYPE.LEGACY);
         System.out.println(address);
-
-
+        //测试,声音
+        String ping = service.ping("ping");
+        System.out.println(ping);
+        //获取余额
+        Balance balance = service.getBalance();
+        System.out.println("{\"trusted\": "+balance.getMine().getImmature()+",\"untrusted_pending\":"+balance.getMine().getTrusted()+",\"immature\":"+balance.getMine().getUntrusted()+"}");
+        //获取链接提示
+        String getchaintips = service.getChainTips();
+        System.out.println(getchaintips);
+        //连接总数
+        String connectionCount = service.getConnectionCount();
+        System.out.println(connectionCount);
+        //添加的节点信息
+        JSONObject nodeinfo = service.getAddedNodeInfo("info");
+        System.out.println(nodeinfo);
+        //内存池信息
+        String memPool = service.getMemPoolInfo();
+        System.out.println(memPool);
+        //区块过滤
+        JSONObject blockFilter = service.getBlockFilter("blockhash",("filtertype"));
+        System.out.println(blockFilter);
+        //通过txoutset信息得到的高度
+        JSONObject txoutset = service.getTxOutsetInfo();
+        System.out.println(txoutset);
     }
 }
 
