@@ -37,9 +37,9 @@ public class Constants {
     public static final String GETCOUNNECTIONCOUNT ="getconnectioncount";
     //添加的节点信息
     public static final String GETADDEDNODEINFO = "getaddednodeinfo";
-    //内存池信息
+    //获取TX内存池
     public static final String GETMEMPOOLINFO = "getmempoolinfo";
-    //区块过滤
+    //检索特定区块
     public static final String GETBLOCKFILTER = "getblockfilter";
     //通过txoutset信息得到的高度
     public static final String GETTXOUTSETINFO="gettxoutsetinfo";

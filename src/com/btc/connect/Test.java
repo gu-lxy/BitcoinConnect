@@ -45,7 +45,7 @@ public class Test {
         String address = service.getNewAddress("gjh", ADDRES_TYPE.LEGACY);
         System.out.println(address);
         //测试,声音
-        String ping = service.ping("ping");
+        Object ping = service.ping("ping");
         System.out.println(ping);
         //获取余额
         Balance balance = service.getBalance();
@@ -59,10 +59,10 @@ public class Test {
         //添加的节点信息
         JSONObject nodeinfo = service.getAddedNodeInfo("info");
         System.out.println(nodeinfo);
-        //内存池信息
+        //获取TX内存池
         String memPool = service.getMemPoolInfo();
         System.out.println(memPool);
-        //区块过滤
+        //检索特定区块
         JSONObject blockFilter = service.getBlockFilter("blockhash",("filtertype"));
         System.out.println(blockFilter);
         //通过txoutset信息得到的高度

@@ -135,8 +135,12 @@ public class BTCService {
         }
     }
 
-    //命令ping
-    public String ping(String ping) {
+    /**
+     *
+     * @param ping 请求将ping发送到所有其他节点，以测量ping时间
+     * @return 返回ping测量的时间
+     */
+    public Object ping(String ping) {
         String json = BcRPCUtils.prepareJSON(Constants.PING);
         Result result = BcRPCUtils.sendPost(map, json);
         if (result == null){
@@ -148,7 +152,12 @@ public class BTCService {
         return null;
     }
 
-    //获取余额
+    /**
+     * 该方法用于查询获取余额
+     *
+     * @Balance 自定义json类型，用于接收返回值
+     * @return 返回一个doule类型
+     */
     public Balance getBalance() {
         String json = BcRPCUtils.prepareJSON(Constants.GETBALANCES);
         Result result = BcRPCUtils.sendPost(map, json);
@@ -162,7 +171,10 @@ public class BTCService {
         return null;
     }
 
-    //获取链接提示
+    /**
+     * 该方法用于获取链接提示
+     * @return 返回一个String类型
+     */
     public String getChainTips(){
         String tips = BcRPCUtils.prepareJSON(Constants.GETCHAINTIPS);
         Result result = BcRPCUtils.sendPost(map, tips);
@@ -176,7 +188,10 @@ public class BTCService {
         return null;
     }
 
-    //连接总数
+    /**
+     * 该方法用于获取连接总数
+     * @return 返回一个String类型
+     */
     public String getConnectionCount(){
         String json = BcRPCUtils.prepareJSON(Constants.GETCOUNNECTIONCOUNT);
         Result result = BcRPCUtils.sendPost(map,json);
@@ -189,7 +204,12 @@ public class BTCService {
         return null;
     }
 
-    //添加的节点信息
+    /**
+     * 该方法用于获取添加到节点信息
+     *
+     * @param node 给定的节点
+     * @return 返回节点的信息
+     */
     public JSONObject getAddedNodeInfo(String node){
         String json = BcRPCUtils.prepareJSON(Constants.GETADDEDNODEINFO,node);
         Result result = BcRPCUtils.sendPost(map,json);
@@ -202,7 +222,11 @@ public class BTCService {
         return null;
     }
 
-    //内存池信息
+    /**
+     *该方法用获取TX内存池
+     *
+     * @return 返回TX内存池的活动状态的详细信息
+     */
     public String getMemPoolInfo(){
         String json = BcRPCUtils.prepareJSON(Constants.GETMEMPOOLINFO);
         Result result = BcRPCUtils.sendPost(map,json);
@@ -217,7 +241,13 @@ public class BTCService {
         }
     }
 
-    //区块过滤
+    /**
+     *该方法用于检索特定区块
+     *
+     * @param blockHash 检索特定块的BIP
+     * @param filterType 筛选器的类型名称
+     * @return json对象
+     */
     public JSONObject getBlockFilter(String blockHash , String filterType){
         String json = BcRPCUtils.prepareJSON(Constants.GETBLOCKFILTER,blockHash,filterType);
         Result result = BcRPCUtils.sendPost(map,json);
@@ -231,6 +261,11 @@ public class BTCService {
         return null;
     }
 
+    /**
+     * 该方法用于通过txoutset信息得到的高度
+     *
+     * @return 返回json对象
+     */
     //通过txoutset信息得到的高度
     public JSONObject getTxOutsetInfo(){
         String json = BcRPCUtils.prepareJSON(Constants.GETTXOUTSETINFO);
